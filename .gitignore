@@ -1,5 +1,5 @@
 .DS_Store
-
+*.sketch
 node_modules
 temp
 .tmp
