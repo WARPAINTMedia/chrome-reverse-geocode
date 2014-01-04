@@ -1,0 +1,229 @@
+html {
+  min-height: 100%;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #666;
+  color: #e2e4e4;
+  -webkit-font-smoothing: antialiased;
+  font: normal normal normal 14px/1 'Edmondsans', 'Open Sans', Arial;
+}
+
+h3 {
+  margin: 0.5em 0;
+}
+
+textarea {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.4em 0;
+  color: white;
+  resize: none;
+  height: 60px;
+  background-color: rgba(0,0,0,0);
+}
+
+.controls, .map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.controls {
+  padding: 0 1em;
+  width: 243px;
+  z-index: 3;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background: url(../images/bg.gif);
+}
+
+.map {
+  left: 243px;
+  width: 547px;
+}
+
+.map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+p {
+  color: #959595;
+}
+
+.well {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  padding: 0.2em 0.8em;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.1);
+  min-height: 71px;
+  border: rgba(0,0,0,0.1);
+  background: #2b2e31;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+
+li strong {
+  border: 1px solid #212325;
+  outline: none;
+  color: #DDD;
+  font-size: 1em;
+  font-family: inherit;
+  padding: 0.8em 0 0.6em;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  width: 47px;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #3A3F42 0%, #383D40 100%);
+}
+
+li span {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+  overflow: visible;
+}
+
+.message {
+  position: relative;
+  top: -35px;
+  height: 23px;
+  margin-bottom: -23px;
+  color: #000;
+  font-size: 0.8em;
+  padding: 0.5em 0;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 3px 0 #782b30;
+  background: linear-gradient(to bottom, #9b494f 0%, #923a3f 100%);
+  -webkit-transform: translateY(-40px);
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.message:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -16px;
+  height: 10px;
+  width: 10px;
+  border: 8px solid rgba(0, 0, 0, 0);
+  border-top: 8px solid #8E3238;
+  left: 50%;
+  margin-left: -10px;
+  -webkit-transform: scale(0.8,1);
+}
+
+.message.in {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+}
+
+button {
+  border: 1px solid #212325;
+  margin: 0;
+  outline: none;
+  color: #e2e4e4;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-family: inherit;
+  padding: 1em 1.8em;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 #246596, 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #4a90db 0%, #215a88 100%);
+  transition: all 0.2s ease;
+}
+button:active {
+  color: #222;
+  box-shadow: inset 0 1px 0 #11446c, inset 0 -1px 0 #185da8, 0 0 0 rgba(0, 0, 0, 0);
+  background: linear-gradient(to bottom, #0f3c61 0%, #155299 100%);
+}
+
+.zoom-controls {
+  position: relative;
+  top: 1em;
+  left: 1em;
+  height: 69px;
+  width: 34px;
+  border: 1px solid #212325;
+  border-radius: 6px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #e2e4e4;
+  z-index: 2;
+  background: linear-gradient(135deg, #575e62 0%, #3a3f42 100%);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+.zoom-controls a {
+  text-decoration: none;
+  color: #e2e4e4;
+  display: block;
+  padding: 4px 0 0 0;
+  height: 50%;
+  background: rgba(120, 120, 120, 0);
+  border-radius: 0 0 6px 6px;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+.zoom-controls a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+.zoom-controls a:active {
+  color: #222;
+  background: rgba(0, 0, 0, 0.1);
+}
+.zoom-controls a:first-child {
+  padding: 6px 0 0 0;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #212325;
+}
+
+#field {
+  position: absolute;
+  top: -100px;
+}
+
+.well, .btn-wrap {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(-140%);
+  -webkit-transition: -webkit-transform 0.2s ease;
+}
+
+.btn-wrap {
+  -webkit-transition-delay: 0.2s;
+}
+
+.loaded .well,
+.loaded .btn-wrap {
+  -webkit-transform: translateX(0);
+}

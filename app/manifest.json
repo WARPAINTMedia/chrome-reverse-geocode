@@ -1,0 +1,21 @@
+{
+  "name": "Easy Reverse Geocoding",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "Easily reverse geocode an address into a latitude and longitude",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "app": {
+      "background": {
+        "scripts": ["scripts/main.js"]
+      }
+      },
+      "permissions": [
+      "clipboardRead",
+      "clipboardWrite",
+      "<all_urls>"
+      ]
+    }
