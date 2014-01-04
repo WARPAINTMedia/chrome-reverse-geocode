@@ -5,6 +5,8 @@ A Chrome app to easily reverse geocode an address into Latitude and Longitude co
 
 Avaliable via the [Chrome Web Store](https://chrome.google.com/webstore).
 
+![screenshot](https://raw.github.com/WARPAINTMedia/chrome-reverse-geocode/master/screenshot.png)
+
 ## Installing
 
 If you want to install this app via the github, follow these instructions:
