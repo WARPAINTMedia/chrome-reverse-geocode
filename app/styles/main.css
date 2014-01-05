@@ -10,9 +10,14 @@ body {
   padding: 0;
   margin: 0;
   background-color: #666;
-  color: #e2e4e4;
+  color: rgba(226, 228, 228, 0);
+  transition: all 0.2s ease;
   -webkit-font-smoothing: antialiased;
   font: normal normal normal 14px/1 'Edmondsans', 'Open Sans', Arial;
+}
+
+body.loaded {
+  color: rgba(226, 228, 228, 1);
 }
 
 h3 {
@@ -62,7 +67,12 @@ textarea {
 }
 
 p {
-  color: #959595;
+  color: rgba(149, 149, 149, 0);
+  transition: color 0.4s ease;
+}
+
+.loaded p {
+  color: rgba(149, 149, 149, 1);
 }
 
 .well {
@@ -216,7 +226,7 @@ button:active {
 .well, .btn-wrap, .zoom-controls {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateX(-140%);
-  -webkit-transition: -webkit-transform 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s 0.2s ease;
 }
 
 .zoom-controls {
