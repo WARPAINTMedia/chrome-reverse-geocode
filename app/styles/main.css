@@ -213,10 +213,15 @@ button:active {
   top: -100px;
 }
 
-.well, .btn-wrap {
+.well, .btn-wrap, .zoom-controls {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateX(-140%);
   -webkit-transition: -webkit-transform 0.2s ease;
+}
+
+.zoom-controls {
+  -webkit-transform: translateY(-140%);
+  -webkit-transition-delay: 0.4s;
 }
 
 .btn-wrap {
@@ -226,4 +231,8 @@ button:active {
 .loaded .well,
 .loaded .btn-wrap {
   -webkit-transform: translateX(0);
+}
+
+.loaded .zoom-controls {
+  -webkit-transform: translateY(0);
 }
