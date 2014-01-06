@@ -3,7 +3,7 @@ chrome-reverse-geocode
 
 A Chrome app to easily reverse geocode an address into Latitude and Longitude coordinates.
 
-Avaliable via the [Chrome Web Store](https://chrome.google.com/webstore).
+Avaliable via the [Chrome Web Store](http://goo.gl/Z15Teh).
 
 ![screenshot](https://raw.github.com/WARPAINTMedia/chrome-reverse-geocode/master/screenshot.png)
 
