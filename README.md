@@ -19,9 +19,11 @@ If you want to install this app via the github, follow these instructions:
 
 You will now see the app in the list with your other extensions. You can update the app by running a `git pull` from the local clone. Then just make sure you reload the app, or else the changes won't be applied.
 
+## Design
+
+The app design was done by [Beatrice Law](https://twitter.com/beatricelaw).
+
 ## To Do
 
-* New App Icon
-* Banner Image
-* Check Google Maps usage Limits
 * Push To Store
+
